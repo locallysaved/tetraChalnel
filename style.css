@@ -1,0 +1,630 @@
+@import url("https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap");
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: rgb(36, 42, 36);
+  margin: 0;
+  padding: 0;
+}
+
+.main-2 {
+  width: 90%;
+  height: 100vh;
+  background: linear-gradient(180deg, rgb(62, 74, 62) 30%, rgb(30, 30, 30) 100%);
+  border: 4px rgb(30, 30, 30) solid;
+  border-top: none;
+  justify-content: center;
+  top: 0;
+}
+
+.main {
+  width: 90%;
+  height: 150vh;
+  background: linear-gradient(180deg, rgb(62, 74, 62) 30%, rgb(30, 30, 30) 100%);
+  border: 4px rgb(30, 30, 30) solid;
+  border-top: none;
+  display: grid;
+  grid-template-rows: 1fr 0.8fr 1fr;
+  grid-template-columns: 1fr;
+  grid-column-gap: 0px;
+  justify-content: center;
+}
+.main__main-table {
+  padding: 0;
+  width: 50%;
+  height: 23rem;
+  overflow-y: scroll;
+  border: 2px rgb(78, 128, 65) solid;
+  border-radius: 0.5rem;
+}
+.main__main-table-2 {
+  padding: 0;
+  width: 50%;
+  overflow-y: scroll;
+  border: 2px rgb(78, 128, 65) solid;
+  border-radius: 0.5rem;
+  height: 50%;
+}
+.main__main-title {
+  font-size: 70pt;
+  width: 70%;
+  height: 100%;
+  text-wrap: wrap;
+  color: white;
+  font-weight: 700;
+  font-family: "Geo", sans-serif;
+  text-align: center;
+  align-self: center;
+  white-space: normal;
+}
+.main__leaderboard-title-box {
+  width: 20rem;
+  border: 2px #90A955 solid;
+  border-bottom: none;
+  border-radius: 1rem 1rem 0 0;
+  background-color: rgb(38, 41, 38);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17pt;
+  color: white;
+  font-family: "Geo", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1mm;
+}
+.main__more-leaderboards-btn {
+  width: 20rem;
+  background-color: rgb(38, 41, 38);
+  border: 2px solid #90A955;
+  height: 3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17pt;
+  color: white;
+  font-family: "Geo", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1mm;
+  transition: 0.2s;
+}
+.main__more-leaderboards-btn:hover {
+  background-color: rgb(26, 27, 26);
+}
+.main__leaderboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-template-rows: 2fr 1fr 1fr;
+}
+.main__not-found-msg {
+  font-size: 40pt;
+  font-family: "Geo", sans-serif;
+  margin-top: 10rem;
+  font-weight: 900;
+  color: rgb(213, 213, 213);
+  height: -moz-max-content;
+  height: max-content;
+  width: 70%;
+  text-align: center;
+}
+
+.green-bg {
+  width: 100%;
+  background-color: rgb(78, 128, 65);
+  margin-top: 5rem;
+  min-height: -moz-max-content;
+  min-height: max-content;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 4px rgb(51, 59, 51) solid;
+  border-bottom: 4px rgb(51, 59, 51) solid;
+  box-shadow: 0 0 3rem #31572C;
+  min-height: max-content;
+}
+
+@media only screen and (max-width: 1300px) {
+  .profile-top {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .profile-top__profile-top-right {
+    width: 60%;
+    align-self: center;
+  }
+  .socials-board {
+    height: 40rem;
+  }
+  .main {
+    grid-template-rows: 2fr 1fr;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .profile-top {
+    flex-direction: row;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .profile-top__profile-top-left {
+    flex-direction: column;
+    box-shadow: 0 0 2rem rgb(30, 30, 30);
+  }
+}
+@media only screen and (min-width: 800px) {
+  .profile-top__profile-top-left {
+    flex-direction: row;
+    box-shadow: none;
+  }
+}
+.profile-top {
+  display: flex;
+  width: 100%;
+  color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+  min-width: 30rem;
+}
+.profile-top__profile-top-left {
+  display: flex;
+  padding: 5rem 0 4rem 0;
+  flex-wrap: nowrap;
+  height: 20rem;
+  padding-right: 0;
+  margin-right: 0;
+  margin-left: 2rem;
+  width: 65%;
+}
+.profile-top__profile-top-left__pfp {
+  margin-left: 2rem;
+  margin-right: 3rem;
+  border-radius: 1rem;
+}
+@media only screen and (min-width: 800px) {
+  .profile-top__profile-top-left__user-info {
+    border-right: 4px solid rgb(66, 71, 65);
+  }
+}
+.profile-top__profile-top-left__user-info {
+  justify-self: left;
+  width: 30rem;
+  min-width: -moz-min-content;
+  min-width: min-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.profile-top__profile-top-left__user-info__username {
+  max-width: -moz-min-content;
+  max-width: min-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
+  margin-bottom: 2rem;
+  font-family: "Geo", sans-serif;
+  font-size: 40pt;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.profile-top__profile-top-left__user-info__user-bio {
+  min-height: -moz-max-content;
+  min-height: max-content;
+  max-width: 25rem;
+  margin-top: 2rem;
+  line-height: 2;
+}
+.profile-top__profile-top-right {
+  display: flex;
+  align-items: center;
+}
+
+.profile-mid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-btm {
+  border: 1px green solid;
+}
+
+.header {
+  width: 99%;
+  background: linear-gradient(180deg, rgb(30, 30, 30) 0%, rgb(49, 59, 49) 100%);
+  border: 3px #90A955 solid;
+  box-shadow: 0 0 1rem #90A955;
+  border-top: none;
+  height: 5.5rem;
+  border-radius: 0 0 0.75rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 1rem;
+}
+.header__src-bar {
+  width: 20rem;
+  height: 1.8rem;
+  background-color: white;
+  border-radius: 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem;
+  border: 1px black sold;
+  transition: 0.15s;
+}
+.header__src-bar__src-bar-input {
+  margin-top: 0;
+  border: none;
+  height: 100%;
+  width: 80%;
+  border-radius: 10rem;
+  padding: 0 1rem 0 1rem;
+  outline: none;
+  font-size: 12pt;
+}
+.header__src-bar:hover {
+  border: 1px #ECF39E solid;
+  box-shadow: 0 0 3px #90A955;
+}
+.header__src-bar-2 {
+  width: 40%;
+  height: 2.5rem;
+  background-color: white;
+  border-radius: 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem;
+  border: 1px black sold;
+  transition: 0.15s;
+  box-shadow: 0 5px 1rem black;
+}
+.header__src-bar-2__src-bar-input-2 {
+  margin-top: 0;
+  border: none;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  padding: 0 1rem 0 1rem;
+  outline: none;
+  font-size: 12pt;
+  align-self: center;
+}
+
+.socials-board {
+  height: 80%;
+  min-width: 100%;
+  margin-left: 2rem;
+  background-color: #232823;
+  border-radius: 1rem;
+  box-shadow: 0 0 2rem #2c322c;
+  border-right: 1px rgb(173, 173, 173) solid;
+  border-left: 1px rgb(173, 173, 173) solid;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 600;
+  overflow-y: scroll;
+}
+.socials-board__socials-title {
+  width: 100%;
+  height: 3.5rem;
+  font-family: "Geo", sans-serif;
+  font-size: 20pt;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem 1rem 0 0;
+  border: 1px rgb(173, 173, 173) solid;
+  border-bottom: none;
+}
+
+.socials-sec {
+  height: 4rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px rgb(96, 96, 96) solid;
+  transition: 0.2s;
+}
+.socials-sec__logo-name {
+  width: 10rem;
+  height: 3rem;
+  display: inherit;
+  align-items: center;
+  margin-left: 2rem;
+}
+.socials-sec__logo-name__socials-logo {
+  padding-right: 1rem;
+  width: 2rem;
+  display: inherit;
+}
+
+.socials-sec:not(:last-child):hover {
+  background-color: #252a25;
+}
+
+.socials-sec:last-child {
+  display: flex;
+  border-bottom: none;
+  align-items: center;
+  justify-content: center;
+  color: rgb(102, 102, 102);
+  font-weight: 900;
+}
+
+.standings {
+  width: 90%;
+  height: 100%;
+  background-color: rgb(30, 30, 30);
+  border: 1px black solid;
+  box-shadow: 0 0 5px rgb(30, 30, 30);
+  border-radius: 1rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-width: 30rem;
+}
+.standings__standings-title {
+  font-size: 27pt;
+  font-family: "Geo", sans-serif;
+  font-weight: 900;
+  width: 100%;
+  height: 5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.standings__standings-main {
+  width: 95%;
+  height: 72%;
+  background-color: rgb(49, 49, 49);
+  display: flex;
+  border-radius: 1rem;
+  border: 2px black solid;
+  box-shadow: 0 0 1rem rgb(14, 14, 14);
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.standings-sec {
+  width: 100%;
+  height: 4rem;
+  border-bottom: 2px rgb(30, 30, 30) solid;
+  transition: 0.2s;
+  display: grid;
+  grid-template-columns: 28% 1fr 1fr 1fr;
+  align-items: center;
+}
+.standings-sec__standings-logo {
+  height: 3rem;
+  width: auto;
+  align-items: center;
+}
+.standings-sec__standings-title {
+  font-size: 17pt;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  margin-left: 3rem;
+}
+.standings-sec__standings-each {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 13pt;
+  font-weight: 500;
+}
+
+.standings-sec:not(:first-child):hover {
+  background-color: rgb(39, 39, 39);
+}
+
+.margin-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-format-100 {
+  width: 100%;
+  height: 100%;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-v-center {
+  display: flex;
+  align-items: center;
+}
+
+.connections-btn {
+  border: none;
+  background-color: inherit;
+  color: inherit;
+  outline: inherit;
+  cursor: pointer;
+  font-size: inherit;
+  display: inherit;
+  margin-right: 2rem;
+}
+
+.connections-btn:hover {
+  text-decoration: underline;
+}
+
+.visible {
+  display: block;
+}
+
+.invisible {
+  display: none;
+}
+
+.standings-logo-name {
+  width: 15rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 12%;
+  justify-content: left;
+}
+
+.standings-sec-1 {
+  color: gray;
+  font-size: 15pt;
+  font-weight: 500;
+  height: 3rem;
+  display: grid;
+  grid-template-columns: 28% 1fr 1fr 1fr;
+  align-content: center;
+  border-bottom: 1px rgb(30, 30, 30) solid;
+}
+
+.standings-title-1 {
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  width: 100%;
+  background-color: rgb(38, 41, 38);
+  color: white;
+  height: 30rem;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th, td {
+  padding: 4px 8px;
+  white-space: nowrap;
+  border-bottom: 1px rgb(17, 17, 17) solid;
+  border-right: 1px rgb(17, 17, 17) solid;
+}
+
+tr {
+  height: 3rem;
+}
+
+.td-1 {
+  width: 10%;
+  font-size: 15pt;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  background-color: rgb(33, 36, 33);
+}
+
+.td-2 {
+  margin: 0;
+  padding-left: 1rem;
+  width: 70%;
+  font-weight: 500;
+}
+
+.td-2:hover {
+  text-decoration: underline;
+}
+
+.td-3 {
+  width: 1px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 35pt;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  color: rgb(213, 213, 213);
+  font-family: "Geo", sans-serif;
+  font-weight: 600;
+  padding-top: 1rem;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.display-flex {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.dropdown-container {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.dropdown-button {
+  position: relative;
+  width: 14rem;
+  background-color: rgb(38, 41, 38);
+  border: 2px solid #90A955;
+  height: 4rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17pt;
+  color: white;
+  font-family: "Geo", sans-serif;
+  font-weight: 700;
+  transition: 0.2s;
+  box-shadow: 0 0 15px rgb(30, 30, 30);
+}
+
+.dropdown-button:hover {
+  background-color: rgb(26, 27, 26);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  background: rgb(23, 25, 23);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex-direction: column;
+  min-width: 150px;
+  z-index: 1000;
+  color: white;
+}
+
+.dropdown-item {
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown-item:hover {
+  background: #3b3b3b;
+}/*# sourceMappingURL=style.css.map */
